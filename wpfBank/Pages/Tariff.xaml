@@ -1,0 +1,127 @@
+﻿<Page x:Class="wpfBank.Pages.Tariff"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpfBank.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="850"
+      Title="Tariff">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Height="250" Width="215">
+            <Border Panel.ZIndex="1" Margin="0,0,0,0">
+                <Border.BitmapEffect>
+                    <DropShadowBitmapEffect Color="#deebf7" Direction="270" ShadowDepth="3" Opacity="1" Softness="2" />
+                </Border.BitmapEffect>
+                <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Height="250" Width="215" Background="#deebf7">
+                    <Label Content="Стабильный" HorizontalAlignment="Center" FontSize="30" Margin="0,20,0,30"/>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">
+                        Без пополнений
+                        <LineBreak />
+                        Без снятия
+                        <LineBreak />
+                        Без капитализации
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">
+                        Минимальный срок
+                        <LineBreak />
+                        от 3 месяцев
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" Foreground="#002060" TextAlignment="Center">
+                        <Run FontSize="30" FontWeight="Bold">8%</Run>
+                        <Run FontSize="16" FontWeight="Bold">годовых</Run>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Height="250" Width="215" Grid.Column="1">
+            <Border Panel.ZIndex="1" Margin="0,0,0,0">
+                <Border.BitmapEffect>
+                    <DropShadowBitmapEffect Color="#deebf7" Direction="270" ShadowDepth="3" Opacity="1" Softness="2" />
+                </Border.BitmapEffect>
+                <StackPanel Grid.Column="1" VerticalAlignment="Top" Grid.Row="0" Height="250" Width="215" Background="#deebf7">
+                    <Label Content="Оптимальный" HorizontalAlignment="Center" FontSize="30" Margin="0,20,0,30"/>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">
+            Пополняемый
+            <LineBreak />
+            Есть возможность снятия
+            <LineBreak />
+            С капитализацией
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">
+            Минимальный срок
+            <LineBreak />
+            от 6 месяцев
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" Foreground="#002060" TextAlignment="Center">
+            <Run FontSize="30" FontWeight="Bold">5%</Run>
+            <Run FontSize="16" FontWeight="Bold">годовых</Run>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Button x:Name="btnIncome" Height="30" Width="300" Grid.Row="1" Content="Рассчитать доход" FontSize="20"
+                Foreground="white" Background="#2c7de0" Grid.Column="1" Click="btnIncome_Click">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="#4f4f4f" Direction="270" ShadowDepth="1" Opacity="1" Softness="1" />
+            </Button.BitmapEffect>
+        </Button>
+        <Grid Height="250" Width="215" Grid.Column="2">
+            <Border Panel.ZIndex="1" Margin="0,0,0,0">
+                <Border.BitmapEffect>
+                    <DropShadowBitmapEffect Color="#deebf7" Direction="270" ShadowDepth="3" Opacity="1" Softness="2" />
+                </Border.BitmapEffect>
+                <StackPanel  VerticalAlignment="Top" Grid.Row="0" Grid.Column="2" Height="250" Width="215" Background="#deebf7">
+                    <Label Content="Стандарт" HorizontalAlignment="Center" FontSize="30" Margin="0,20,0,30"/>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">
+            Пополняемый
+            <LineBreak />
+            Без снятия
+            <LineBreak />
+            Без капитализации
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="10">
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center">
+            Минимальный срок
+            <LineBreak />
+            от 3 месяцев
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" Foreground="#002060" TextAlignment="Center">
+            <Run FontSize="30" FontWeight="Bold">6%</Run>
+            <Run FontSize="16" FontWeight="Bold">годовых</Run>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+
+</Page>
